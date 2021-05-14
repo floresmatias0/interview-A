@@ -3,16 +3,20 @@
         <ion-grid>
             <ion-row>
             <ion-col size="1" class="ion-align-self-center">
-              <span class="material-icons" routerLink="/login">arrow_back</span>  
+              <span class="material-icons backCustom" routerLink="/login">arrow_back</span>  
             </ion-col>
             <ion-col size="11">
                 <ion-grid>
                     <ion-row> 
-                        <ion-col size="1" class="ion-align-self-center ion-align-items-end" >
-                            <span class="material-icons">person</span> 
-                        </ion-col>
-                        <ion-col size="11" class="ion-align-self-center ion-text-left">
-                            <ion-title class="textSignUpV2">Tu cuenta personal</ion-title> 
+                        <ion-col 
+                            size="12" 
+                            class="ion-align-self-center">
+                            <ion-title class="textSignUpV2">
+                                <span class="material-icons personCustom">
+                                    person
+                                </span>     
+                                Tu cuenta personal
+                            </ion-title> 
                         </ion-col>
                     </ion-row>
                 </ion-grid>
@@ -28,53 +32,111 @@
         <ion-grid>
             <ion-row>
              <ion-col size="12" class="ion-align-self-center colSignUp">
+
                 <label>Nombre</label>
                 <ion-item class="itemSingUp">
-                    <ion-input class="inputSignUp" type="text" placeholder="Nombre" formControlName="name"></ion-input>
-                    <div class="validation-errors errorName" *ngIf="fieldValid('name')">
+                    <ion-input 
+                        class="inputSignUp" 
+                        type="text" 
+                        placeholder="Nombre" 
+                        autoComplete="nope" 
+                        formControlName="name">
+                    </ion-input>
+                </ion-item>                    
+                    <div 
+                    class="validation-errors errorNameV2" 
+                    *ngIf="fieldValid('name')">
                         Ingrese su nombre
                     </div>
-                </ion-item>
+
                 <label>Apellido</label>
                 <ion-item class="itemSingUp">
-                    <ion-input class="inputSignUp" type="text" placeholder="Apellido" formControlName="surname"></ion-input>
-                    <div class="validation-errors errorName" *ngIf="fieldValid('surname')">
+                    <ion-input 
+                        class="inputSignUp" 
+                        type="text" 
+                        placeholder="Apellido"
+                        autoComplete="nope"  
+                        formControlName="surname">
+                    </ion-input>
+                </ion-item>
+                    <div 
+                        class="validation-errors errorNameV2" 
+                        *ngIf="fieldValid('surname')">
                         Ingrese su Apellido
                     </div>
-                </ion-item>
+
                 <label>Genero</label>
                 <ion-item class="itemSingUp">
-                        <ion-select class="inputSignUp" value="Sin especificar" placeholder="Sin especificar" formControlName="genre" okText="Okay" cancelText="Dismiss">
-                            <ion-select-option value="Masculino">Masculino</ion-select-option>
-                            <ion-select-option value="Femenino">Femenino</ion-select-option>
+                        <ion-select 
+                            class="inputSignUp" 
+                            value="Sin especificar" 
+                            placeholder="Sin especificar" 
+                            formControlName="genre" 
+                            okText="Okay" 
+                            cancelText="Dismiss">
+                            <ion-select-option value="Masculino">
+                                Masculino
+                            </ion-select-option>
+                            <ion-select-option value="Femenino">
+                                Femenino
+                            </ion-select-option>
                         </ion-select>
-                    <div class="validation-errors errorName" *ngIf="fieldValid('genre')">
-                        Ingrese su Genero
-                    </div>
                 </ion-item>
-             </ion-col>  
+                <div 
+                    class="validation-errors errorNameV2" 
+                    *ngIf="fieldValid('genre')">
+                    Ingrese su Genero
+                </div>
+             </ion-col> 
+
              <ion-col size="12" class="ion-align-self-center colSignUp">
                 <label>Correo electrónico</label>
                 <ion-item class="itemSingUp">
-                    <ion-input class="inputSignUp" type="text" placeholder="Email" name="email" formControlName="email"></ion-input>
-                    <div class="validation-errors errorName" *ngIf="fieldValid('email')">
+                    <ion-input 
+                        class="inputSignUp" 
+                        type="text" 
+                        placeholder="Email" 
+                        name="email"
+                        autoComplete="nope"  
+                        formControlName="email">
+                    </ion-input>
+                </ion-item>
+                    <div 
+                        class="validation-errors errorNameV2" 
+                        *ngIf="fieldValid('email')">
                         Ingrese su Correo Electrónico
                     </div>
-                </ion-item>
+
                 <label>Contraseña</label>
                 <ion-item class="itemSingUp">
-                    <ion-input class="inputSignUp" type="password" placeholder="Contraeña" name="password" formControlName="password"></ion-input>
-                    <div class="validation-errors errorName" *ngIf="fieldValid('password')">
-                        Ingrese su contraseña
-                    </div>
+                    <ion-input 
+                        class="inputSignUp" 
+                        type="password" 
+                        placeholder="Contraseña" 
+                        name="password"
+                        formControlName="password">
+                    </ion-input>
                 </ion-item>
+                <div 
+                    class="validation-errors errorNameV2" 
+                    *ngIf="fieldValid('password')">
+                    Ingrese su contraseña
+                </div>
              </ion-col> 
             </ion-row>    
-        </ion-grid>                    
-        
+        </ion-grid>                   
 
+        <ion-button
+            class="buttonCustom" 
+            expand="block" 
+            type="submit" 
+            (click)="create()">
+            CREAR CUENTA
+            <span 
+                class="material-icons icon-nextV2">
+                arrow_forward_ios
+            </span>
+        </ion-button>
 
-        <ion-button class="buttonCustom" expand="block" type="submit" (click)="create()">CREAR CUENTA</ion-button>
     </form>
-
 </ion-content>

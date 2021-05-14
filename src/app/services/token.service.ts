@@ -38,15 +38,19 @@ export class TokenService {
       owner:this.user.name,
       owner_id:this.user.id
     }
+    console.log("DATA:",data)
     return this.fb.collection('tokens').add( data ).then( (resp)=>{
+      console.log("CREATE TOKEN:",resp.id)
       let trans = {
         quantity:token.quantity,
         price:token.price,
         token_id:resp.id,
         type:'PUBLISHED'
       }
+      console.log("TRANS:",trans)
+      console.log("USER",this.user)
       this._transaction.createTransactionSell(trans,token)
-      this._user.updateToken(data.quantity,true);
+      this._user.updateToken(data.quantity,false);
      
       }).catch((err)=>{
         return new Error(err);
@@ -58,6 +62,7 @@ export class TokenService {
 
   updateToken(token:any,quantity){
     let totalQuantity = token.quantity - quantity;
+    console.log("TOTALQUANTITY:",totalQuantity)
     return this.fb.collection('tokens').doc(token.id).update({quantity: totalQuantity});  
   }
 

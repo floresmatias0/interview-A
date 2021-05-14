@@ -26,7 +26,8 @@ export class SignUpPage implements OnInit {
   async createToast(message){
     const toast = await this.toast.create({
       message: message,
-      duration: 2000
+      duration: 2000,
+      color:"danger"
     });
     toast.present();
   }
@@ -37,8 +38,9 @@ export class SignUpPage implements OnInit {
         this.form.reset();
         this.createToast('Datos Creados');
         this.router.navigate(['login']);
-
       })
+    }else{
+      return this.createToast('Complete los campos')
     } 
   
   }

@@ -1,34 +1,64 @@
 <ion-content class="contentCustom">
     <ion-img class='imageCustom' src={{image}} alt='logo'></ion-img>
+
     <form [formGroup]="loginForm" class="formCustom">
-        <label>Correo electrónico</label>
-        <ion-item class="itemCustom">
-            
-            <ion-input class="inputCustom" type="email" placeholder="Ingrese su correo electrónico" formControlName="email"></ion-input>
-            <div class="validation-errors" *ngIf="fieldValid('email')">
+
+            <label>Correo electrónico</label>
+            <ion-item class="itemCustom">
+                <ion-input 
+                    class="inputCustom" 
+                    type="email" 
+                    placeholder="Ingrese su correo electrónico" 
+                    formControlName="email">
+                </ion-input>
+            </ion-item>            
+            <div 
+                class="validation-errors errorName" 
+                *ngIf="fieldValid('email')">
                 Ingrese su correo electrónico
             </div>
-        </ion-item>
-        <label>Clave</label>
-        <ion-item class="itemCustom">
-            
-            <ion-input class="inputCustom" type="password" placeholder="Ingrese su contraseña" formControlName="password"></ion-input>
-            <div class="validation-errors" *ngIf="fieldValid('password')">
+
+            <label>Clave</label>
+            <ion-item class="itemCustom">  
+                <ion-input 
+                    class="inputCustom" 
+                    type="password" 
+                    placeholder="Ingrese su contraseña" 
+                    formControlName="password">
+                </ion-input>
+            </ion-item>
+            <div 
+                class="validation-errors errorName" 
+                *ngIf="fieldValid('password')">
                 Ingrese su contraseña
             </div>
-        </ion-item>
-        <ion-button class="buttonLogin" expand="block" type="submit" (click)="login()">ENTRA A TU CUENTA</ion-button>
 
+            <ion-button 
+                class="buttonLogin" 
+                expand="block" 
+                type="submit" 
+                (click)="login()">
+                ENTRA A TU CUENTA
+                    <span 
+                        class="material-icons icon-nextV3">
+                        arrow_forward_ios
+                    </span>
+            </ion-button>
     </form>
     <hr>
     <div class="divCustom">
         <p class='textCustomV1'>¿Eres un nuevo usuario en Quipu?</p>
-        <p class='textCustomV2' expand="block" routerLink="/sign-up">¡Crear una cuenta AQUI! Es gratis.</p>
+        <p 
+            class='textCustomV2' 
+            expand="block" 
+            routerLink="/sign-up">
+            ¡Crear una cuenta AQUI! Es gratis.
+        </p>
     </div>
 </ion-content>
 <!-- Footer without a border -->
 <ion-footer class="ion-no-border">
     <ion-toolbar>
-      <ion-img src={{banner}} alt="banner"></ion-img>
+      <ion-img class="footerLogin" src={{banner}} alt="banner"></ion-img>
     </ion-toolbar>
 </ion-footer>

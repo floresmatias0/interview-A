@@ -42,11 +42,11 @@ export class BuyPage implements OnInit {
 
 
   buyToken( d ){
-    console.log(d)
-    console.log(this.buyForm)
+    console.log("D",d.quantity)
+    console.log("NOSE:",this.buyForm.value.quantity)
     
     let transaction:any = {
-      quantity:2,
+      quantity:this.buyForm.value.quantity,
       price:this.token.price,
       token_id:this.token.id,
       type:'BOUGHTED'

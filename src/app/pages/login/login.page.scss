@@ -34,10 +34,19 @@ ion-item.itemCustom{
     outline: none !important;
 
 }
-
+.errorName{
+    color: red;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold; 
+    margin-bottom: 1.5em;
+    text-align: center; 
+}
 .inputCustom{
     --placeholder-color: gray;
     color: black;
+}
+ion-item{ 
+    --border-color: transparent; 
 }
 .itemCustomV2{
     --background: transparent;
@@ -58,6 +67,7 @@ ion-item.itemCustom{
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
         margin: 0;
+        cursor: pointer;
     }
 }
 .buttonLogin{
@@ -65,8 +75,18 @@ ion-item.itemCustom{
     --background:#12A19A;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    margin-left: 2em;
-    margin-right: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    width: 16em;
+}
+.icon-nextV3{
+    position: relative;
+    font-size: 1.2rem;
+    left: 0.5em;
+}
+.footerLogin{
+    max-height: 14em;
 }
 // @media screen and (max-width:480px){
 //     .imageCustom{
