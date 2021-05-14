@@ -1,0 +1,106 @@
+.toolbarHome{
+    width: 100%;
+    --background: #F5F6F8;
+    height: 4.5em;
+}
+.titleHome{
+    color: #404040;
+    background-color: white; 
+    margin: 1.3em;
+    padding-left: 0.5em !important;
+    height: 1.5em;
+    border-radius: 0.2em;
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.contentHome{
+    width: 100%;
+    --background:#F5F6F8;
+}
+.itemHome{
+    --background:#F5F6F8;
+    margin: 1.3em;
+}
+.listHome{
+    background-color:#F5F6F8;
+}
+.hydrated{
+    padding: 0;
+    p{
+        margin: 0;
+        font-family: 'Montserrat', sans-serif; 
+        font-size: 0.7rem;
+        color: #404040;
+    }
+}
+.labelHome{
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #404040 !important;
+}
+.buttonHome{
+    --border-radius: 23px !important;
+    --background:#12A19A;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+div.item-inner{
+    padding-inline-end: none !important;
+}
+.labelHomeV2{
+    --color: #404040 !important;
+    margin-left: 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.labelHomeV3{
+    --color: #404040 !important;
+    margin-left: 1em;
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 0.7rem !important;
+    font-style: italic;
+}
+.colLabel{
+    background-color: white !important;
+    border-radius: 0.3em !important;
+}
+.inputHome{
+    --background:white;
+    --color:black;
+    border: 1px solid #7A7A7A;
+    border-radius: 0.5em;
+    width: 7em;
+    margin-left: 1em;
+}
+.itemHomeV2{
+    --background:#F5F6F8;
+    margin: 2em;
+    border: transparent !important;
+}
+ion-item{
+    --inner-padding-end: 0px;
+    --padding-start:0px;
+}
+.labelHomeV4{
+    --color: #404040 !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 1em;
+}
+.buttonHomeV2{
+    --border-radius: 23px !important;
+    --background:#12A19A;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    height: 3em;
+}
+ion-item{ 
+    --border-color: #CECECE; 
+}
+.icon-next{
+    font-size: 1.2em;
+}

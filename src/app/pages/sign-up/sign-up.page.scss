@@ -1,0 +1,67 @@
+.headerSignUp{
+    --background: #12A19A;
+}
+.contentSignUp{
+    --background: #F5F6F8;
+
+}
+.itemSingUp{
+    --background: white;
+    --highlight-color-focused: #F5F6F8 !important;
+    --highlight-color-invalid: #F5F6F8 !important;
+    --highlight-color-valid:#F5F6F8 !important;
+    --border-color: white !important;
+
+}
+.errorName{
+    color: red;
+}
+.inputSignUp{
+    --placeholder-color: gray;
+    width: 90%;
+    color: black;
+    --background: white;
+    border: 2px solid gray;
+    border-radius: 0.5em;
+    padding-left: 1em !important;
+}
+.inputSignUp:valid{
+    color: #12A19A;
+}
+.titleSignUp{
+    color: #404040;
+    font-family: 'Montserrat', sans-serif; 
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.formSignUp{
+    width: 100%;
+
+    label{
+        color: #404040;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        margin-left: 1em;  
+    }
+}
+.textSignUpV2{
+    padding: 0;
+}
+.colSignUp{
+    background-color: white !important;
+    border-radius: 5px !important;
+    margin-bottom: 1em !important;
+    padding: 0.5em !important;
+}
+.item-native::before{
+    border: none !important;
+}
+.buttonCustom{
+    --border-radius: 23px !important;
+    --background:#12A19A;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-left: 81px;
+    margin-right: 83px;
+}

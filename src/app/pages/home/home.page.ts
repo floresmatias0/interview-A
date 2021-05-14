@@ -18,6 +18,7 @@ export class HomePage implements OnInit {
   constructor( private _token:TokenService, public _user:UserService, private toast:ToastController,public modal:ModalController ) {
         
     this._token.getTokens().subscribe(e => {
+      console.log("TOKEN:",e)
       this.tokens = e;
     });
 

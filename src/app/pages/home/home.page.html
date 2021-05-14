@@ -1,19 +1,68 @@
-<ion-header>
-    <ion-toolbar>
-        <ion-title>Token Disponibles</ion-title>
+<ion-header class="ion-no-border">
+    <ion-toolbar class="toolbarHome">
+        <ion-title class="titleHome">Tokens Disponibles</ion-title>
     </ion-toolbar>
 </ion-header>
-
-
-<ion-content>
-
-    <ion-list>
-        <ion-item *ngFor="let row of tokens">
-            <ion-label>{{row.owner}} <br>Disponibles: {{row.quantity}} | Precio: {{ row.price | currency }} </ion-label>
-            <ion-button *ngIf="_user.getUserAuthenticated().id != row.owner_id" (click)="presentModal(row)">Comprar</ion-button>
-            <ion-button *ngIf="_user.getUserAuthenticated().id == row.owner_id" color="danger" (click)="cancelToken(row)">Cancelar</ion-button>
+<ion-content class="contentHome">
+    <ion-list class="listHome">
+        <ion-item class="itemHome" *ngFor="let row of tokens">
+            <ion-grid>
+                <ion-row>
+                    <ion-col size="8">
+                        <ion-label class="labelHome">{{row.owner}} </ion-label>
+                        <ion-grid>
+                            <ion-row>
+                                <ion-col size="6" class="ion-align-self-center">
+                                    <p><b>Disponibles: </b>{{row.quantity}}</p>
+                                </ion-col>
+                                <ion-col size="6" class="ion-align-self-center">
+                                    <p><b>Precio:</b> {{ row.price | currency }}</p>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                        <!-- <ion-button *ngIf="_user.getUserAuthenticated().id == row.owner_id" color="danger" (click)="cancelToken(row)">Cancelar</ion-button> -->
+                    </ion-col>
+                    <ion-col size="4" class="ion-align-self-center ion-text-center">
+                        <ion-button class="buttonHome" *ngIf="_user.getUserAuthenticated().id != row.owner_id" (click)="presentModal(row)">Comprar<span class="material-icons icon-next">
+                            arrow_forward_ios
+                            </span></ion-button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
         </ion-item>
     </ion-list>
-
+    <ion-item class="itemHome">
+        <ion-grid>
+            <ion-row>
+                <ion-col size="12" class="colLabel">
+                    <ion-label class="labelHomeV2">Compra óptima</ion-label>
+                    <ion-label class="labelHomeV3">*Buscaremos la mejor opcion de compra para ti</ion-label> 
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-item>
+    <ion-item class="itemHomeV2" lines="none">
+        <ion-grid>
+            <ion-row>
+                <ion-col size="12">
+                    <ion-label  class="labelHomeV4">Cantidad de tokens</ion-label>
+                </ion-col>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col size="6" class="ion-align-self-center">
+                            <ion-input class="inputHome" type="number"></ion-input>
+                        </ion-col>
+                        <ion-col size="6" class="ion-align-self-center">
+                            <ion-button class="buttonHomeV2">COMPRAR
+                                <span class="material-icons icon-next">
+                                arrow_forward_ios
+                                </span>
+                            </ion-button>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-row>
+        </ion-grid>
+    </ion-item>
 
 </ion-content>

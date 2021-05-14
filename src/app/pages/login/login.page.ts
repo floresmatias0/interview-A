@@ -12,9 +12,13 @@ import { UserService } from '../../services/user.service';
 export class LoginPage implements OnInit {
 
   loginForm:FormGroup;
+  public image?:string;
+  public banner?:string;
 
   constructor( private fb:FormBuilder,private _user:UserService,private toast:ToastController,private router:Router ) {
     this.createForm();
+    this.image="../../../assets/Rectangle-606.png";
+    this.banner="../../../assets/Banner.png"
    }
 
   ngOnInit() {

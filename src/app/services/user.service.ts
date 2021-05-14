@@ -36,6 +36,8 @@ export class UserService {
   createUser( user:User ){
     let data:User = {
       name:user.name,
+      surname:user.surname,
+      genre:user.genre,
       email:user.email,
       password:user.password,
       tokens:1000

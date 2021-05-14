@@ -1,0 +1,76 @@
+.headerCustom{
+    width: 100%;
+    --background: #CBE6E1 !important;
+}    
+.imageCustom{
+    width: 6em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contentCustom{
+    width: 100%;
+    --ion-background-color: #CBE6E1 !important;
+}
+.formCustom{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    label{
+        color: #12A19A;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;  
+    }
+}
+ion-item.itemCustom{
+    border: 2px solid gray;
+    width: 100%;
+    border-radius: 0.5em;
+    --background: aliceblue;
+    --highlight-color-focused: white;
+    --highlight-color-invalid: white;
+    --highlight-color-valid:white;
+    outline: none !important;
+
+}
+
+.inputCustom{
+    --placeholder-color: gray;
+    color: black;
+}
+.itemCustomV2{
+    --background: transparent;
+}
+.divCustom{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.2em;
+    .textCustomV1{
+        color: #404040;
+        margin: 0;
+    }
+    .textCustomV2{
+        color: #12A19A;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
+        margin: 0;
+    }
+}
+.buttonLogin{
+    --border-radius: 23px !important;
+    --background:#12A19A;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+// @media screen and (max-width:480px){
+//     .imageCustom{
+//         width: 20em;
+
+//     }
+// }
