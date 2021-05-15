@@ -20,6 +20,8 @@ export class UserPage implements OnInit {
   
     this._transactions.getTransactions().subscribe(e => {
       let published = e.forEach(e => {
+        console.log("NOSE",e)
+        console.log("REVENUE",this.revenue)
        if(e.type == 'PUBLISHED') this.publishedTotal += e.quantity; 
        if(e.type == 'SOULD') this.souldTotal += e.quantity;
        if(e.type == 'SOULD') this.revenue += (e.price * e.quantity);

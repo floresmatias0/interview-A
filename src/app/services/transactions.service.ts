@@ -70,7 +70,6 @@ export class TransactionsService {
         token_id:transaction.token_id,
         type:'SOULD'
       }
-      console.log("DATACREATE:",data)
       return this.fb.collection('transactions').add( data );
    }
 }

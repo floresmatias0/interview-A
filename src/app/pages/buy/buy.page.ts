@@ -41,16 +41,15 @@ export class BuyPage implements OnInit {
   }
 
 
-  buyToken( d ){
-    console.log("D",d.quantity)
-    console.log("NOSE:",this.buyForm.value.quantity)
-    
+  buyToken( ){
+
     let transaction:any = {
       quantity:this.buyForm.value.quantity,
       price:this.token.price,
       token_id:this.token.id,
       type:'BOUGHTED'
     }
+    
      this._transaction.createTransactionBuy(transaction,this.token).then(e => {
       this.createToast('Token Comprados');
       this.dismiss();
